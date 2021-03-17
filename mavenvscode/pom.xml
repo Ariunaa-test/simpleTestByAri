@@ -36,12 +36,6 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-  <dependency>
-    <groupId>com.github.ariunaa-test</groupId>
-    <artifactId>system-lambda</artifactId>
-    <version>1.0.0</version>
-    <scope>test</scope>
-  </dependency>
   <build>
     <plugins>
       <plugin>
