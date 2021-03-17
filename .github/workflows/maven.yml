@@ -4,7 +4,8 @@ name: tests
 on: push
 
 jobs:
-  first_job:
+  test:
+    name: Running junit test
     runs-on: ubuntu-latest
 
     steps:
