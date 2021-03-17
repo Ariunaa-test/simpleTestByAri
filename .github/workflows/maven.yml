@@ -25,6 +25,6 @@ jobs:
           restore-keys: ${{ runner.os }}-m2
 
       - name: Test with Maven
-        run: mvn -B test --file pom.xml
+        run: mvn -Dtest=JunitAriTestingTest test
         
   
