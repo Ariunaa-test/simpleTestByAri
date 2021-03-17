@@ -5,7 +5,8 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
 //import org.junit.Test;
-import org.junit.Assert;
+//import org.junit.Assert;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -28,14 +29,17 @@ public class JunitAriTestingTest {
         System.setOut(standardOut);
     }
 
-    int[] intArray = new int[]  {1,2,3,4,5,6,7,8,9,10};
+    static int[] intArray = new int[]  {1,2,3,4,5,6,7,8,9,10};
+
     @Test
-    void givenSystemOutRedirection_whenInvokePrintln_thenOutputCaptorSuccess() {
+    void testGivenSystemOutRedirection_whenInvokePrintln_thenOutputCaptorSuccess() {
+        
         JunitAriTesting numberPrinting = new JunitAriTesting();
+        
         
         numberPrinting.printNumber(intArray);
         
-        Assert.assertEquals("1,2,3,4,5,6,7,8,9,10", outputStreamCaptor.toString()
+        assertEquals("1,2,3,4,5,6,7,8,9,10", outputStreamCaptor.toString()
             .trim());
     
     }
@@ -45,10 +49,10 @@ public class JunitAriTestingTest {
     Point c = new Point(-5, -6);
 
     @Test
-    void areaTest() {
+    void testArea() {
         JunitAriTesting ar = new JunitAriTesting();
         int areaOuput = ar.countTriangleArea(a,b,c);
-        Assert.assertEquals(22, areaOuput);
+        assertEquals(22, areaOuput);
 
 
     }
